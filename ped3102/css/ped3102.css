@@ -1,0 +1,811 @@
+/* style sheet */
+
+
+/* global begin */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+/*div
+{
+    outline: 1px solid green;
+}
+
+div div
+{
+    outline: 1px solid red;
+}
+
+div div div
+{
+    outline: 1px solid blue;
+}*/
+
+hr
+{
+    margin: 24px 0px;
+    height: 1px;
+    border: 0;
+    background: <?=$color2?>;
+    width: 100%;
+}
+
+hr.color1
+{
+    background: <?=$color1?>;
+}
+
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration: underline;
+    color: inherit;
+    color: <?=$color1?>;
+}
+
+a:focus
+{
+    color: inherit;
+    color: <?=$color1?>;
+}
+
+a:active
+{
+    color: inherit;
+    color: <?=$color1?>;
+}
+
+a:visited
+{
+    color: inherit;
+    color: <?=$color1?>;
+}
+
+a:hover
+{
+    color: <?=$color2?>;
+    text-decoration: underline;
+}
+
+a.color1
+{
+    color: <?=$color1?>;
+}
+
+a.color1:hover
+{
+    color: <?=$color2?>;
+}
+
+a.color2
+{
+    color: <?=$color2?>;
+}
+
+a.color2:hover
+{
+    color: <?=$color1?>;
+}
+
+a#banner_a
+{
+    color: <?=$color2?>;
+    text-decoration: none;
+}
+
+a#banner_a:hover
+{
+    color: <?=$color2?>;
+    text-decoration: none;
+}
+
+a img
+{
+    /*outline: 1px dotted <?=$color1?>;*/
+}
+
+a img:hover
+{
+    /*outline: 1px dotted <?=$color2?>;*/
+}
+
+a h3:hover /* add other headers, if required */
+{
+    color: <?=$color2?>;
+}
+
+h1
+{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: <?=$color2?>;
+}
+
+h2
+{
+    font-weight: normal;
+    font-size: 1.5em;
+    color: <?=$color2?>;
+}
+
+h3
+{
+    font-weight: bold;
+    font-size: 1em;
+    color: <?=$color2?>;
+}
+
+h4
+{
+    font-weight: normal;
+    font-size: 1em;
+    color: <?=$color2?>;
+}
+
+h5
+{
+    font-weight: bold;
+    font-size: 0.875em;
+    color: <?=$color2?>;
+}
+
+h6
+{
+    font-weight: normal;
+    font-size: 0.875em;
+    color: <?=$color2?>;
+}
+
+.color1
+{
+    color: <?=$color1?>;
+}
+
+.color2
+{
+    color: <?=$color2?>;
+}
+
+table
+{
+    border-spacing: 0; /* equivalent to cell spacing - just for certain browsers?*/
+}
+
+td.i128
+{
+    width: 128px;
+}
+
+td.i96
+{
+    width: 96px;
+    max-width: 96px;
+}
+
+
+td + td
+{
+    padding-left: 16px;
+}
+
+table.sidelinks, table.links
+{
+    font-size: 0.875em;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+table.sidelinks, table.links
+{
+    width: 96px;
+    max-width: 96px;
+    
+}
+
+table.links
+{
+    width: 768px;
+    max-width: 768px;
+}
+
+table.sidelinks td, table.links td
+{
+    padding-bottom: 16px;
+    width: 96px;
+    max-width: 96px;
+}
+
+table.authors
+{
+}
+
+input[type="submit"], input[type="button"]
+{
+    cursor: pointer;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner
+{
+    border: none;
+}
+
+textarea
+{
+    resize: none;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+ol
+{
+    list-style: decimal outside none;
+    margin-left: 2em;
+}
+
+ol.alpha
+{
+    list-style: lower-alpha outside none;
+    margin-left: 2em;
+}
+
+ol.roman
+{
+    list-style: lower-roman outside none;
+    margin-left: 2em;
+}
+
+ol.disc
+{
+    list-style: disc outside none;
+    margin-left: 2em;
+}
+
+ol.decimal
+{
+    list-style: decimal outside none;
+    margin-left: 2em;
+}
+
+ol.top1em
+{
+    margin-top: 1em;
+}
+
+ol.margin1em>li
+{
+    /*margin-bottom: 12pt;*/
+    margin-bottom: 1em;
+}
+
+li>ol.margin1em>li
+{
+    margin-top: 1em;
+}
+
+sup
+{
+    font-size: 0.5em;
+}
+
+div.spacing15
+{
+    line-height: 1.5em;
+}
+
+/* global end */
+
+
+
+/* general begin */
+
+a.a_highlight2 {
+    background-color: <?=$color1?>;
+    color: <?=$contrast1?>;
+}
+
+a.a_roundedcorner {
+    -moz-border-top-right-radius:5px;
+    -webkit-border-top-right-radius: 5px;
+    -khtml-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+hr.hr_title
+{
+    margin: 10px 0 10px 0;
+    height: 1px;
+    background: #808080;
+    width: 100%;
+}
+
+div.clear_float /* empty div to use after floating elements to clear glitchy float */
+{
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+input[type="text"].rounded
+{
+    -moz-border-radius:3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari, Chrome */
+    -khtml-border-radius: 3px; /* KHTML */
+    border-radius: 3px; /* CSS3 */
+    border: 1px solid #808080;
+}
+
+input[type="submit"].ok
+{
+    width: 80px;
+    border: 1px solid #808080;
+    background-color: #DDDDDD;
+}
+
+input[type="submit"].ok:hover
+{
+    background-color: #CCCCCC;
+}
+
+span.required:after
+{
+    content: "*";
+    color: <?=$color1?>;
+    padding-right: 3px;
+}
+
+span.notrequired:after
+{
+    content: " ";
+}
+
+span.required:after, span.notrequired:after
+{
+    font-size: 1em;
+    width: auto;
+}
+
+img.i256256
+{
+    width: 256px;
+    height: 256px;
+    max-width: 256px;
+    max-height: 256px;
+}
+
+img.i128128
+{
+    width: 128px;
+    height: 128px;
+    max-width: 128px;
+    max-height: 128px;
+}
+
+img.i9696
+{
+    width: 96px;
+    height: 96px;
+    max-width: 96px;
+    max-height: 96px;
+}
+
+div.quote
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    font-style: italic;   
+}
+
+div.center
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;  
+}
+
+.reference
+{
+    font-size: 0.75em;
+}
+
+.margin48
+{
+    margin-left: 48px;
+}
+
+/* general end */
+
+
+
+/* main layout begin */
+
+body
+{
+    font-family: sans-serif, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    /*font-size: 10pt;*/
+    /*font-size: 16px = 1em = 12pt*/
+    /*text-align: center;*/
+    
+    color: <?=$colortext?>;
+    font-size: 1em;
+    
+    /*background: none;
+    background: url('/images/fields/dreamstime_m_7655430footballplay.jpg') repeat fixed center;
+    opacity:0.5; filter:alpha(opacity=50); /* For IE8 and earlier */
+}
+
+/*div#imgtest
+{
+    background: none;
+    background: url('/images/fields/dreamstime_m_7655430footballplay.jpg') repeat fixed center;
+    opacity:0.1; filter:alpha(opacity=10);
+}*/
+
+body *, div#div_body, div#div_body *
+{
+    /*opacity:10; filter:alpha(opacity=1000);*/
+    /*text-align: left;*/ /* does not work */
+}
+
+html, body
+{
+    height: 100%; /* for keeping footer at bottom */
+}
+
+/*div {
+ -khtml-opacity:.50; 
+ -moz-opacity:.50; 
+ -ms-filter:"alpha(opacity=50)";
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50; 
+}*/
+
+div#div_body
+{
+    min-height: 100%; /* for keeping footer at bottom */
+    position: relative; /* for keeping footer at bottom */
+    /* had to comment - wasn't working... height: 100%; /* for IE 6 and IE 5.5 */ /* for keeping footer at bottom */
+    
+}
+
+
+
+/* top bar begin */
+
+div#div_topbar_ww
+{
+    width: 100%;
+    background: none;
+}
+
+div#div_topbar
+{
+    margin: 0 auto;
+    width: 1000px;
+    color: <?=$color1?>;
+    background-color: <?=$contrast1?>;
+    font-size: 0.75em;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+}
+
+div#div_topbar table
+{
+    width: 100%;
+}
+
+div#div_topbar td
+{
+    vertical-align: middle;
+}
+
+div#div_topbar td#topbar_left
+{
+    text-align: left;
+    width: 500px;
+    
+    bbackground: url("../images/something.jpg") no-repeat;
+}
+
+div#div_topbar td#topbar_right
+{
+    text-align: right;
+    width: 500px;
+}
+
+
+
+/* top bar end */
+
+
+
+/* banner begin*/
+
+div#div_banner_ww
+{
+    width: 100%;
+    background: none;
+}
+
+div#div_banner
+{
+    margin: 0 auto;
+    width: 1000px;
+    color: <?=$color2?>;
+    background-color: <?=$contrast2?>;
+    height: 72px;
+    line-height: 72px;
+    
+    text-align: center;
+    font-style: italic;
+    ttttttext-decoration: underline;
+    font-size: 3em;
+}
+
+/* banner end */
+
+
+
+/* top menu begin */
+
+div#div_topmenu_ww
+{
+    width: 100%;
+    min-width: 1000px;
+    background: none;
+    /*border-top: 1px solid <?=$contrast1?>;*/
+    /*border-bottom: 1px solid <?=$contrast1?>;*/
+}
+
+div#div_topmenu
+{
+    margin: 0 auto;
+    width: 1000px;
+    color: <?=$contrast1?>;
+    background-color: <?=$color1?>;
+    font-size: 0.875em;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+div#div_topmenu>ul
+{
+    list-style: none;
+    display: inline-block; /* use this to center ul in div */
+}
+
+div#div_topmenu>ul>li
+{
+    text-align: center;
+    /*display: inline-block;*/
+    display: table-cell; /* use table-cell instead of inline-block to have no gaps between menu items */
+    position: relative;
+    
+    border-left: 1px solid <?=$contrast1?>;
+}
+
+div#div_topmenu>ul>li#topmenu_last
+{
+    border-right: 1px solid <?=$contrast1?>;
+}
+
+div#div_topmenu>ul>li>ul
+{
+    list-style: none;
+    position: absolute;
+    -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s;
+    opacity: 0;
+    z-index: -100; /* require this - yay for css? */
+}
+
+div#div_topmenu>ul>li:hover>ul
+{
+    /*opacity: 0.9;*/
+    opacity: 1.0;
+    z-index: +100; /* require this - yay for css? */
+}
+
+div#div_topmenu>ul>li>ul>li
+{
+    text-align: left;
+    border-top: 1px solid <?=$contrast1?>;
+    -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s;
+    height: 0;
+    
+    border-left: 1px solid <?=$contrast1?>;
+    border-right: 1px solid <?=$contrast1?>;
+    position: relative;
+    left: -1px;
+}
+
+div#div_topmenu>ul>li:hover>ul>li
+{
+    height: 24px;
+    line-height: 24px;
+}
+
+div#div_topmenu a, div#div_topmenu span
+{
+    display: block;
+    padding: 0 24px 0 24px;
+    text-decoration: none;
+    white-space: nowrap;
+    
+    color: <?=$contrast1?>;
+    background-color: <?=$color1?>;
+}
+
+div#div_topmenu a:hover, div#div_topmenu span:hover
+{
+    color: <?=$contrast2?>;
+    background-color: <?=$color2?>;
+}
+
+/* top menu end */
+
+
+
+/* page begin */
+
+div#div_page_ww
+{
+    /*background-color: <?=$background1?>;*/
+    width: 100%;
+    /*margin-top: 1px;*/ /* space between menu and contents*/
+    /*padding-top: 10px;*/
+    padding-bottom: 49px; /* div_footer_ww height + padding top + padding bottom + border top +
+                             space between div_page_ww and div_footer_ww + div_footer_ww bottom */
+                          /* 25 + 1 + 24 - 1 */
+                          /* for keeping footer at bottom */
+}
+
+div#div_page
+{
+    margin: 0 auto;
+    width: 1000px;
+    color: <?=$colortext?>;
+    background-color: <?=$contrast1?>;
+    font-size: 1em;
+    border-top: 1px solid <?=$contrast1?>; /* space between menu and contents*/
+}
+
+div#div_page table
+{
+    width: 100%;
+}
+
+div#div_page td
+{
+    vertical-align: top;
+    line-height: 1.5em;
+}
+
+div#div_page td#page_left
+{
+    text-align: left;
+    width: 855px; /* = 767 - 24 */ /* 743 or 855 */
+    
+    border-top: 1px solid <?=$color2?>;
+    padding-top: 24px;
+    padding-right: 24px;
+    
+}
+
+div#div_page td#page_right
+{
+    text-align: left;
+    width: 96px; /* = 233 - 24 - 1 */ /* 208 or 96 */
+    
+    border-top: 1px solid <?=$color2?>;
+    border-left: 1px solid <?=$color2?>;
+    padding-top: 24px;
+    padding-left: 24px;
+}
+
+/* page end */
+
+
+
+/* side begin */
+div#div_side
+{
+}
+
+div#div_side a
+{
+    ccolor: <?=$color2?>;
+}
+
+div#div_side a:hover
+{
+    ccolor: <?=$color1?>;
+}
+
+/* side end */
+
+
+
+/* footer begin */
+
+div#div_footer_ww
+{
+    width: 100%;
+    bbbborder-top: 1px solid <?=$color1?>;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /*height: 20px; just leaving this in the div#div_footer /* for keeping footer at bottom */
+    position: absolute; /* for keeping footer at bottom */
+    bottom: -1px; /* so that vertical scroll bar is always visible */ /* for keeping footer at bottom */
+}
+
+div#div_footer
+{
+    margin: 0 auto;
+    width: 1000px;
+    color: <?=$color1?>;
+    background-color: <?=$contrast1?>;
+    font-size: 0.75em;
+    height: 29px; /* for keeping footer at bottom */
+    height: 25px; /* for keeping footer at bottom */
+    line-height: 28px;
+    line-height: 24px;
+    text-align: center;
+    border-top: 1px solid <?=$color1?>;
+}
+
+div#div_footer table
+{
+    width: 100%;
+}
+
+div#div_footer td
+{
+    vertical-align: middle;
+    /*outline: 1px solid red;*/
+}
+
+div#div_footer td#td_footer_left
+{
+    text-align: left;
+    width: 300px;
+    
+    bbackground: url("../images/something.jpg") no-repeat;
+    
+}
+
+div#div_footer td#td_footer_center
+{
+    text-align: left;
+    width: 400px;
+}
+
+div#div_footer td#td_footer_right
+{
+    text-align: right;
+    width: 300px;
+}
+
+/* footer end */
+
+
+
+/* main layout end */
+
+
+
